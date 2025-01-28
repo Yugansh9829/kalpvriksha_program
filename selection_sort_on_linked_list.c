@@ -9,7 +9,6 @@ typedef struct Node{
 
 Node* create_node(int data){
     Node *node = (Node*)malloc(sizeof(Node));
-
     node->data = data;
     node->next = NULL;
 
@@ -65,9 +64,20 @@ int main(){
     Node *head = (Node*)malloc(sizeof(Node));
     head = NULL;
 
-    for(int i=10;i>=1;i--) head = insert_at_end(head, i);
+    printf("Enter nodes in of linked list (-1 for termination ) :");
+    int size = 0;
+    while(1){
+        int data;
+        scanf("%d", &data);
+        if(data==-1) break;
 
-    selection_sort(head, 10);
+        head = insert_at_end(head, data);
+        size++;
+    }
+    printf("linked list before sorting is : ");
+    display_linked_list(head);
+    selection_sort(head, size);
+    printf("\n linked list after sorting is : ");
     display_linked_list(head);
 
     return 0;

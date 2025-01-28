@@ -70,7 +70,6 @@ void quick_sort(Node *head){
 
     Node* mid = sort_across_pivot(head);
    
-    // printf("\n");
     Node *temp = mid->next;
     mid->next = NULL;
 
@@ -87,6 +86,8 @@ int main(){
     head = NULL;
     int size = 0;
 
+
+    printf("Enter node data of linked list (-1 for termination) : ");
     while(1){
         int data;
         scanf("%d", &data);
@@ -94,8 +95,11 @@ int main(){
         size++;
         head = insert_at_end(head, data);
     }
-
+    printf("Linked list before sorting is : ");
+    display_linked_list(head);
     quick_sort(head);
+
+    printf("\n Linked list after sorting is : ");
     display_linked_list(head);
 
     return 0;

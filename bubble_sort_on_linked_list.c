@@ -57,8 +57,18 @@ int main(){
     Node *head = (Node*)malloc(sizeof(Node));
     head = NULL;
 
-    for(int i=10;i>=1;i--) head = insert_at_end(head, i);
+    printf("Enter nodes in of linked list (-1 for termination ) :");
+    while(1){
+        int data;
+        scanf("%d", &data);
+        if(data==-1) break;
 
+        head = insert_at_end(head, data);
+    }
+    
+    printf("linked list before sorting is : ");
+    display_linked_list(head);
+    printf("\n");
     bubble_sort(head, 10);
     display_linked_list(head);
 

@@ -64,12 +64,7 @@ int main(){
     head = NULL;
     int size = 0;
 
-    // for(int i=2;i>=1;i--){
-    //     int data =
-    //     head = insert_at_end(head, i);
-
-    // }
-
+    printf("enter nodes in linked list (-1 for temination ) :");
     while(1){
         int data;
         scanf("%d", &data);
@@ -77,8 +72,11 @@ int main(){
         size++;
         head = insert_at_end(head, data);
     }
-
+    
+    printf("linked list before sorting is : ");
+    display_linked_list(head);
     insertion_sort(head, size);
+    printf("\nlinked list after sorting is : ");
     display_linked_list(head);
 
     return 0;

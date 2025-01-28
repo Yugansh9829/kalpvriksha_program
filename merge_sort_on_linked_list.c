@@ -93,6 +93,7 @@ int main(){
     head = NULL;
     int size = 0;
 
+    printf("Enter node data of linked list (-1 for termination ) : ");
     while(1){
         int data;
         scanf("%d", &data);
@@ -100,7 +101,12 @@ int main(){
         size++;
         head = insert_at_end(head, data);
     }
+
+    printf("\nLinked list befor sorting is : ");
+    display_linked_list(head);
     head = merge_sort(head);
+
+    printf("\n Linked list after sorting is : ");
     display_linked_list(head);
 
     return 0;
