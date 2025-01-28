@@ -53,7 +53,7 @@ int main(){
     Node *head = (Node *)malloc(sizeof(head));
 
     head = NULL;
-
+    printf("Enter nodes of linked list (-1 for termination) : ");
     while(1){
         int data;
         scanf("%d", &data);

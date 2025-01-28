@@ -46,11 +46,10 @@ void binary_search(Node *head, int target){
     Node*itr = head;
     while(start<=end){
         int mid = (start+end)/2;
-        // itr = head;
+        itr = head;
         int idx = mid;
 
         while(itr && mid--)itr = itr->next;
-        printf("mid : %d\n", itr->data);
 
         if(itr->data == target){
             printf("founded target at index : %d\n", idx);
@@ -81,7 +80,7 @@ int main(){
     Node *head = (Node *)malloc(sizeof(head));
 
     head = NULL;
-
+    printf("enter node of linked list (-1 ) to terminate : ");
     while(1){
         int data;
         scanf("%d", &data);

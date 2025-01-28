@@ -86,7 +86,7 @@ int main(){
     head_2 = NULL;
     
     for(int i=1;i<10;i+=2) head_1 = insert_at_end(head_1, i);
-    for(int i=2;i<10;i+=2) head_1 = insert_at_end(head_2, i);
+    for(int i=2;i<10;i+=2) head_2 = insert_at_end(head_2, i);
 
     printf("linked list  1 : ");
     display(head_1);
