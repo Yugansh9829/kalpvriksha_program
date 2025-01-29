@@ -79,8 +79,7 @@ void sort_linked_list(Node *head, int size){
     }
 }
 
-int main(){
-
+void take_input(){
     Node *head = (Node*)malloc(sizeof(Node));
     head = NULL;
 
@@ -115,5 +114,13 @@ int main(){
     printf("\nlinked list after sorting is : ");
     display(head);
 
+    return;
+
+}
+
+int main(){
+
+    take_input();
     return 0;
+
 }
